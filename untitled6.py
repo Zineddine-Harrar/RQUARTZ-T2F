@@ -30,8 +30,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Charger les fichiers CSV
-planning_df = pd.read_csv('C:\\Users\\zined\\Downloads\\PLANNING RQUARTZ T2F.csv', delimiter=';', encoding='ISO-8859-1')
-details_df = pd.read_csv('C:\\Users\\zined\\OneDrive - ATALIAN\\Documents\\Db RQUARTA-ECOBOT40\\RQUARTZ-T2F-(15-07-2024).csv', encoding='ISO-8859-1', delimiter=';', on_bad_lines='skip')
+planning_df = pd.read_csv('PLANNING RQUARTZ T2F.csv', delimiter=';', encoding='ISO-8859-1')
+details_df = pd.read_csv('RQUARTZ-T2F-(15-07-2024).csv', encoding='ISO-8859-1', delimiter=';', on_bad_lines='skip')
 
 # Nettoyer les colonnes dans details_df
 details_df.columns = details_df.columns.str.replace('\r\n', '').str.strip()
@@ -153,7 +153,7 @@ def calculate_weekly_indicators(details_df, semaine):
     return heures_cumulees, surface_nettoyee, vitesse_moyenne, productivite_moyenne
 
 # Afficher les logos côte à côte
-logo_path1 = "C:\\Users\\zined\\Downloads\\atalian-logo (1).png"
+logo_path1 = "atalian-logo (1).png"
 st.image(logo_path1, width=150)  # Ajustez la largeur selon vos besoins
 
 st.title('Indicateurs de Suivi des Parcours du RQUARTZ T2F')
